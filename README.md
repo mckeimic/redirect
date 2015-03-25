@@ -1,2 +1,3 @@
 # redirect
-Redirect from short URLs to more complicated ones
+Redirect from short, memorable URLs paths on your server to more complicated
+ones elsewhere.
