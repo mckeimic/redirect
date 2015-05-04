@@ -6,6 +6,7 @@ class testRedirector(unittest.TestCase):
         self.redirector = Redirector()
 
     def teardown(self):
+        self.redirector.flushall()
         self.redirector = False
 
     def testAddPath(self):

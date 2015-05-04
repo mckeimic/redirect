@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Add Redirector</title>
+        <link rel="stylesheet" href="css/style.css">
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+            <script src="js/vendor/modernizr.js"></script>
+            <link rel="stylesheet" href="css/foundation.css">
+    </head>
+
+    <body id="main">
+
+        <h1>Add Redirector</h1>
+        <form name="redirectadd" method="post" action="/add">
+            <fieldset>
+                <label>
+                    Redirect To:
+                    <span class="prefix">http://</span>
+                    <input name="url" type="text" placeholder="google.com" />
+                </label>
+
+                <br />
+
+                <label>
+                    Local Path:
+                    <span class="prefix">/</span>
+                    <input name="new_path" type="text" placeholder="google" />
+                </label>
+
+                <br />
+
+                <label>
+                    Expire Time:
+                    <select name="expire_time">
+                        <option value="0">Never</option>
+                        <option value="60">1 Minute</option>
+                        <option value="3600">1 Hour</option>
+                        <option value="86400">1 Day</option>
+                        <option value="2592000">30 Day</option>
+                    </select>
+                </label>
+
+                <br />
+
+                <label>
+                    Authorization Token:
+                    <input name="auth_token" type="text" placeholder="42424242424242" />
+                </label>
+
+                <input type="submit" value="Submit" />
+            </fieldset>
+        </form>
+
+
+    </body>
+</html>
