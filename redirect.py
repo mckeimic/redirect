@@ -31,7 +31,7 @@ def main():
             if authorize(security_token):
                 url = "http://{}".format(flask.request.form['url'])
                 new_path = flask.request.form['new_path']
-                timeout = flask.request.form['expire_time']
+                timeout = int(flask.request.form['expire_time'])
                 redirector.map_path(new_path, url, expire_time=timeout)
                 return "Success! {} now directs to {} and will expire after {} seconds".format(
                         new_path, url, timeout, security_token)
